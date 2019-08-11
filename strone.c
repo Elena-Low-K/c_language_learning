@@ -3,34 +3,31 @@
 int main(void) {
 
 	int num = 4;
-	struct peo{
-	char name;
-	int age;
-	float height;
+	struct people {
+		char* name;
+		int age;
+		float height;
 	};
 	
-	struct peo Ig;
-	struct peo Ma;
-	struct peo Ol;
-	struct peo An;
+	struct people peo[4];
 	
-	Ig.age = 40;
-	Ma.age = 36;
-	Ol.age = 15;
-	An.age = 6;
+	peo[0].name = "Igor";
+	peo[1].name = "Maryna";
+	peo[2].name = "Olena";
+	peo[3].name = "Anastasiia";
 
-	Ig.height = 172;
-	Ma.height = 164;
-	Ol.height = 162;
-	An.height = 120;
+	peo[0].age = 40;
+	peo[1].age = 36;
+	peo[2].age = 15;
+	peo[3].age = 6;
 
- 	//for (int i = 0; i < num; i++) {
-  
-	printf("Igor. Age is %d. Height is %f.\n", Ig.age, Ig.height); 
-	printf("Maryna. Age is %d. Height is %f.\n", Ma.age, Ma.height);
-	printf("Olena. Age is %d. Height is %f.\n", Ol.age, Ol.height);
-	printf("Anastasia. Age is %d. Height is %f.\n", An.age, An.height);
+	peo[0].height = 172;
+	peo[1].height = 164;
+	peo[2].height = 162;
+	peo[3].height = 120;
 
-	//}
+ 	for (int i = 0; i < num; i++){
+  		printf("Name is %s. Age is %d. Height is %f.\n", peo[i].name, peo[i].age, peo[i].height);	
+	}
 	return 0;
 	}

@@ -1,54 +1,54 @@
 #include <stdio.h>
- 
+
+#define MALE 0
+#define FEMALE 1
+
 int main(void) {
 	
-	int gender;
-	int Female = 1;
-	int Male = 0;
-        int num = 4;
+	int i;
+	int num = 4;
+		struct people {
+		char* name;
+		int age;
+		float height;
+		float weight;
+		unsigned int gender;
+	};
+	
+	char female;
+	char male;
 
-        struct peo{
-        char name;
-	int age;
-        float height;
-	float weight;
-	int gender;
-        };
+	struct people peo[4];
+	
+	peo[0].name = "Igor";
+	peo[1].name = "Maryna";
+	peo[2].name = "Olena";
+	peo[3].name = "Anastasiia";
 
-        struct peo Ig;
-        struct peo Ma;
-        struct peo Ol;
-        struct peo An;
+	peo[0].age = 40;
+	peo[1].age = 36;
+	peo[2].age = 15;
+	peo[3].age = 6;
 
-        Ig.age = 40;
-        Ma.age = 36;
-        Ol.age = 15;
-        An.age = 6;
+	peo[0].height = 172;
+	peo[1].height = 164;
+	peo[2].height = 162;
+	peo[3].height = 120;
 
-	Ig.weight = 90;
-	Ma.weight = 50;
-	Ol.weight = 50;
-	An.weight = 18;
+	peo[0].weight = 90;
+	peo[1].weight = 52;
+	peo[2].weight = 50;
+	peo[3].weight = 18;
 
-	(gender = 0); Male : Female;
+	peo[0].gender = MALE;
+	peo[1].gender = FEMALE;
+	peo[2].gender = FEMALE;
+	peo[3].gender = FEMALE;
 
-	Ig.gender = 0;
-	Ma.gender = 1;
-	Ol.gender = 1;
- 	An.gender = 1;
- 
-        Ig.height = 172;
-        Ma.height = 164;
-        Ol.height = 162;
-	An.height = 120;
+	//(peo[i].gender > 0) ? "male" : "female";
 
-        //for (int i = 0; i < num; i++) {
-
-        printf("Igor. Age is %d. Height is %f. Weight is %f. Gender is %d.\n", Ig.age, Ig.height, Ig.weight, Ig.gender);
-        printf("Maryna. Age is %d. Height is %f.Weight is %f. Gender is %d.\n", Ma.age, Ma.height, Ma.weight, Ma.gender);
-        printf("Olena. Age is %d. Height is %f.Weight is %f. Gender is %d.\n", Ol.age, Ol.height, Ol.weight, Ol.gender);
-        printf("Anastasia. Age is %d. Height is %f.Weight is %f. Gender is %d.\n", An.age, An.height, An.weight, An.gender);
-
-        //}
-        return 0;
-        }
+	for (int i = 0; i < num; i++){
+		printf("Name is %s. Age is %d. Height is %f. Weight is %f. Gender is %s\n", peo[i].name, peo[i].age, peo[i].height, peo[i].weight, (peo[i].gender == MALE) ? "male" : "female" /*peo[1].gender*/);
+	}
+	return 0;
+	}

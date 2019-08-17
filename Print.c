@@ -35,8 +35,6 @@ int main(void) {
        //printf("Length of User's circle = 2*%f*%f\n", pi, r);
        //printf("Area = %f*%f*%f\n", pi, r, r);
        //printf("Length = %f\n", length);
-       printf("Length = %f\n", 2*pi*r);
-       printf("Area = %f\n\n", pi*r*r);
        /* printf("%d\n", t + t);
        printf("%d\n", t - t);
        printf("%d\n", t * t);
@@ -51,19 +49,31 @@ int main(void) {
        scanf("%f", &end);
        printf("Print frequency: \n");
        scanf("%f", &fre);
-       float i;
-       for (i = q; i <= end; i=i+fre) {
-	       printf("Length of %f = %f\n", i, 2*pi*i); 
-	       printf("Area of %f = %f\n\n", i, pi*i*i);
-       }
-       //printf("aaa %f, %f\n", i-1, end);
+       	
+	
+	printf("Length = %f\n", 2*pi*r);
+	printf("Area = %f\n", pi*r*r);
+	printf("Difference = %f\n", (pi*r*r-2*pi*r));
+	printf("Ratio = %f\n", ((pi*r*r)/(2*pi*r)));
+	
+	float i;
+	for (i = q; i <= end; i=i+fre) {
+		printf("Length of %f = %f\n", i, 2*pi*r);
+		printf("Area of %f = %f\n\n", i, pi*i*i);
+		printf("Difference = %f\n", (pi*i*i-2*pi*r));
+		printf("Ratio = %f\n", ((pi*i*i)/(2*pi*r)));
+
+	 }
+       
        if (i-fre != end) {
-	       printf("Length of %f = %f\n", end, 2*pi*end);
-               printf("Area of %f = %f\n\n", end, pi*end*end);
-       }
-       printf("What is your age?\n");
-       scanf("%d", &nn);
-       //printf("Entered '%s', num = '%d'", nn, xzc);
+		printf("Length of %f = %f\n", end, 2*pi*end);
+		printf("Area of %f = %f\n\n", end, pi*end*end);
+		printf("Difference = %f\n", (pi*end*end-2*pi*end));
+		printf("Ratio = %f\n", ((pi*end*end)/(2*pi*end)));
+		 }
+       //*printf("What is your age?\n");
+       //scanf("%d", &nn);
+       /*printf("Entered '%s', num = '%d'", nn, xzc);
        switch (nn)
 		       {
 			       case 5: 
@@ -73,7 +83,7 @@ int main(void) {
 				  printf("You are Olena\n");
 		                  break;
                        default: printf("Then you are not Igor's daughter\n"); 
-		       };
+		       };*/
        
              
        return 0;}
